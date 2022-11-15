@@ -34,6 +34,7 @@ public class VentanaInteractiva extends javax.swing.JFrame {
         botonPapada = new javax.swing.JButton();
         botonPecho = new javax.swing.JButton();
         botonCulo = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -81,7 +82,15 @@ public class VentanaInteractiva extends javax.swing.JFrame {
         jPanel1.add(botonPecho, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 150, 130));
 
         botonCulo.setContentAreaFilled(false);
-        jPanel1.add(botonCulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 230, 70, 70));
+        botonCulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCuloActionPerformed(evt);
+            }
+        });
+        jPanel1.add(botonCulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 230, 50, 100));
+
+        jLabel2.setText("Tócame!");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Gato-bacano.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 480));
@@ -124,6 +133,11 @@ public class VentanaInteractiva extends javax.swing.JFrame {
         // TODO add your handling code here:
         new VentanaInteractivaLenDerecho().setVisible(true);
     }//GEN-LAST:event_botonLenteDerechoActionPerformed
+
+    private void botonCuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCuloActionPerformed
+        // TODO add your handling code here:
+        new VentanaInteractivaCulo().setVisible(true);
+    }//GEN-LAST:event_botonCuloActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,6 +182,7 @@ public class VentanaInteractiva extends javax.swing.JFrame {
     private javax.swing.JButton botonPapada;
     private javax.swing.JButton botonPecho;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
